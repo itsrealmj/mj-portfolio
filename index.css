@@ -1,0 +1,209 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: rgb(196, 193, 193);
+}
+body {
+    background-color: black;
+}
+html { scroll-behavior: smooth; }
+h2 {
+    padding: 5rem 0 2rem 0;
+    text-align: center;
+}
+/* header nav links*/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .95);
+    border-bottom: 1px solid gray;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    padding: 2rem 2.5rem;
+}
+nav .my-name{
+    display: flex;
+    flex: 1;
+    text-shadow: 0 1px orange;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+}
+nav .my-name a{
+    display: inline-flex;
+    text-decoration: none;
+}
+nav .links a{
+    text-decoration: none;
+    margin-left: 4rem;
+    position: relative;
+}
+nav .links a:after {
+    content: "";
+    width:0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom:-.5rem;
+    transition: .3s ease-in-out;
+}
+nav .links a:hover {
+    color: rgb(71, 71, 71);
+    
+}
+nav .links a:hover:after {
+    width:100%;
+    background-color: rgb(71, 71, 71);;
+}
+
+/*  banner section */
+main {
+    display: flex;
+    padding: 0 3rem;
+    position: relative;
+}
+main .banner {
+    /* border: 1px solid white; */
+}
+main .title {
+    width: 100%;
+    background-color: transparent;
+}
+main h1 {
+    font-size: 6rem;
+    letter-spacing: 2rem;
+    background-color: transparent;
+    color: rgb(196, 193, 193);
+}
+main .studio {
+    margin-left: 5px;
+    letter-spacing: 1.4rem;
+    opacity: .8;
+    background-color: transparent;
+}
+main #imagination {
+    margin-top: 2rem;
+    letter-spacing: 10px;
+    opacity: .4;
+    font-size: 3.5rem;
+    font-weight: 300;
+    background-color: transparent;
+}
+main  #col-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 2rem;
+    left: 27rem;
+    background-color: transparent;
+}
+main .stack {
+    padding: 1rem 5px;
+    background-color: transparent;
+}
+main .stack button {
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    border: 1px solid gray;
+    cursor: pointer;
+    background-color: transparent;
+}
+main .shape {
+    width: 450px;
+    /* position: absolute; */
+}
+main .pic {
+    background-color: transparent;
+    position: absolute;
+    top: 2rem;
+    left: 10rem;
+    height: 300px;
+}
+
+/* portfolio section */
+section .about {
+    padding-top: 10rem;
+}
+section .portfolio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+section .portfolio .card {
+    display: flex;
+    flex-direction: column;
+}
+.card img {
+    border-radius: 5px;
+    box-shadow:3px 2px 3px rgb(223, 121, 5);
+    opacity: .8;
+}
+.card div { 
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.card div a {
+    margin-right: 1rem;
+    text-decoration: none;
+    padding-bottom: .3rem;
+    border-bottom: 2px solid gray;
+}
+
+/* contact section */
+section .contact {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    line-height: 2.5rem;
+    padding: 1rem 0;
+}
+
+.contact input, textarea{
+    border: none;
+    width: 500px;
+    padding: .5rem;
+    outline: none;
+}
+.contact .send, textarea{
+    font-size: 1rem;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.808);
+}
+section .contact .input-field {
+    font-size: 1.1rem;
+    border: none;
+    background-color: black;
+    border-bottom: 2px solid white;
+    outline: none;
+}
+
+/* footer section */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    bottom: 0;
+    margin-top: 2rem;
+    background-color: transparent;
+}
+footer .icon {
+    display:flex;
+    border: 1px solid white;
+    padding: .5rem 2rem;
+    border-bottom:none;
+    border-radius: 5px 5px 0 0;
+}
+footer .icon div {
+    padding: 0 1rem ;
+}
+footer a {
+    text-decoration: none;
+    border-bottom: 2px solid gray;
+}
