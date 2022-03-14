@@ -10,8 +10,11 @@ body {
 }
 html { scroll-behavior: smooth; }
 h2 {
-    padding: 5rem 0 2rem 0;
+    padding: 5rem 0 1rem 0;
     text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 2rem;
 }
 /* header nav links*/
 header {
@@ -24,7 +27,7 @@ header {
 header nav {
     display: flex;
     align-items: center;
-    padding: 2rem 2.5rem;
+    padding: 2rem;
 }
 nav .my-name{
     display: flex;
@@ -37,10 +40,16 @@ nav .my-name a{
     display: inline-flex;
     text-decoration: none;
 }
+nav .links {
+    position: relative;
+    cursor: pointer;
+
+}
 nav .links a{
     text-decoration: none;
     margin-left: 4rem;
     position: relative;
+
 }
 nav .links a:after {
     content: "";
@@ -61,69 +70,72 @@ nav .links a:hover:after {
     background-color: rgb(71, 71, 71);;
 }
 
-/*  banner section */
-main {
-    display: flex;
-    padding: 0 3rem;
-    position: relative;
+nav .nav-links {
+    position: absolute;
+    right: -1.5rem;
+    line-height: 2.5rem;
+    display: none;
+    width: 200px;
+    opacity: .9;
+    background-color: black;
+    margin-top: 2rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+}
+
+
+/*main             */
+
+main .banner-container {
+   width: 86%;
+   margin: 0 auto;
 }
 main .banner {
-    /* border: 1px solid white; */
+    position: relative;
 }
-main .title {
-    width: 100%;
-    background-color: transparent;
+main .banner-containerer #about {
+    position: relative;
 }
 main h1 {
     font-size: 6rem;
-    letter-spacing: 2rem;
-    background-color: transparent;
+    /*letter-spacing: .3rem;*/
     color: rgb(196, 193, 193);
 }
-main .studio {
-    margin-left: 5px;
-    letter-spacing: 1.4rem;
-    opacity: .8;
-    background-color: transparent;
+main .shape {
+    transform: translateX(50px);
+    width: 250px;
 }
-main #imagination {
-    margin-top: 2rem;
-    letter-spacing: 10px;
-    opacity: .4;
-    font-size: 3.5rem;
-    font-weight: 300;
+main .pic {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
     background-color: transparent;
-}
-main  #col-2 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     position: absolute;
-    top: 2rem;
-    left: 27rem;
-    background-color: transparent;
+    left: 5rem;
+}
+main .studio {
+    margin-left: 6px;
+    /*letter-spacing: .8rem;*/
+    opacity: .8;
 }
 main .stack {
-    padding: 1rem 5px;
-    background-color: transparent;
+    padding: 1rem 0;
+    display: flex;
 }
 main .stack button {
-    padding: .5rem 1rem;
+    padding: .3rem ;
     border-radius: 3px;
     border: 1px solid gray;
     cursor: pointer;
     background-color: transparent;
+    font-size: .9rem;
+    margin-left: 5px;
+    transform: scale(1.0);
+    transition: .2s ;
+    /*letter-spacing: 2px;*/
 }
-main .shape {
-    width: 450px;
-    /* position: absolute; */
-}
-main .pic {
-    background-color: transparent;
-    position: absolute;
-    top: 2rem;
-    left: 10rem;
-    height: 300px;
+main .stack button:hover {
+    color: gray;
+    transform: scale(1.1);
 }
 
 /* portfolio section */
@@ -134,7 +146,8 @@ section .portfolio {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    width: 100%;
+    gap: 3rem 2rem;
 }
 section .portfolio .card {
     display: flex;
@@ -157,17 +170,22 @@ section .portfolio .card {
 }
 
 /* contact section */
+
 section .contact {
-    margin-top: 2rem;
     display: flex;
     justify-content: center;
     line-height: 2.5rem;
-    padding: 1rem 0;
+    padding: 1rem ;
+    width: 100%;
+}
+section .contact form {
+    width: 100%;
+    padding: 1rem ;
 }
 
 .contact input, textarea{
     border: none;
-    width: 500px;
+    width: 100%;
     padding: .5rem;
     outline: none;
 }
@@ -191,7 +209,6 @@ footer {
     position: sticky;
     bottom: 0;
     margin-top: 2rem;
-    background-color: transparent;
 }
 footer .icon {
     display:flex;
@@ -199,6 +216,7 @@ footer .icon {
     padding: .5rem 2rem;
     border-bottom:none;
     border-radius: 5px 5px 0 0;
+    background-color: black;
 }
 footer .icon div {
     padding: 0 1rem ;
@@ -207,3 +225,10 @@ footer a {
     text-decoration: none;
     border-bottom: 2px solid gray;
 }
+
+
+
+
+    @media only screen and (max-width: 600px) {
+
+    }

@@ -5,65 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
-    <title>Document</title>
+
 </head>
 <body>
     <header>
         <nav>
             <div class="my-name">
-                <a href="#">MJ NACIONAL</a>
+                <a href="#about">MJ NACIONAL</a>
             </div>
+
             <div class="links">
-                <a href="#about">ABOUT</a>
-                <a href="#portfolio">PORTFOLIO</a>
-                <a href="#contact">CONTACT</a>
+                <!-- <div class="overlay"></div> -->
+                <img class="closed" src="./images/closed.png" width="30px" style="display: none;">
+                <img class="menu" src="./images/menu1.png" width="30px">
+                <div class="nav-links">
+                    <a href="#about">ABOUT</a>
+                    <a href="#portfolio">PORTFOLIO</a>
+                    <a href="#contact">CONTACT</a>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main>
-        <div class="banner" id="about">
-            <img class="shape" src="./images/blob.svg" alt="">
-            <img class="pic" src="./images/pic.png" width="300px" alt="">
-        </div>
 
-        <div class="banner" id="col-2">
-            <div class="title">
-                <h1>BLACK</h1>
-                <p class="studio">CREATIVE STUDIO</p>
+    <main>
+        <div class="banner-container">
+            <div class="banner" id="about">
+                <img class="shape" src="./images/blob.svg" alt="">
+                <img class="pic" src="./images/pic.png" alt="">
             </div>
-            <div class="stack">
-                <button> HTML5 </button>
-                <button> CSS3 </button>
-                <button> Vanilla JS </button>
-                <button> Git </button>
-                <button> Github </button>
-                <button> Web API </button>
+            
+            <div class="banner" id="banner-text">
+
+                <div class="title">
+                    <h1>BLACK</h1>
+                    <p class="studio">CREATIVE STUDIO</p>
+                </div>
+                <div class="stack">
+                    <button> HTML5 </button>
+                    <button> CSS3 </button>
+                    <button> Vanilla JS </button>
+                    <button> Git </button>
+                    <button> Github </button>
+                    <button> Web API </button>
+                </div>
             </div>
-            <h1 id="imagination"> IMAGINATION </h1>
         </div>
     </main>
     
     <section>
         <h2>Portfolio</h2>
-        <section>
             <div id="portfolio" class="portfolio">
                 <div class="card">
-                    <img src="./images/store.png" alt="store image" width="350px">
+                    <img src="./images/store.png" alt="store image" width="380px">
                     <div>
                         <a href="https://itsrealmj.github.io/Frontendmentor-EStore/">Site</a>
                         <a href="https://itsrealmj.github.io/Frontendmentor-EStore/">Source code</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./images/frontendmentor.png" alt="store image" width="350px">
+                    <img src="./images/frontendmentor.png" alt="store image" width="380px">
                     <div>
                         <a href="https://itsrealmj.github.io/JavaScript-Store/">Site</a>
                         <a href="https://itsrealmj.github.io/JavaScript-Store/">Source code</a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./images/store2.png" alt="store image" width="350px">
+                    <img src="./images/store2.png" alt="store image" width="380px">
                     <div>
                         <a href="https://itsrealmj.github.io/JavaScript-Store/">Site</a>
                         <a href="https://itsrealmj.github.io/JavaScript-Store/">Source code</a>
@@ -71,17 +79,17 @@
                 </div>
 
                 <div class="card">
-                    <img src="./images/frontendmentor.png" alt="store image" width="350px">
+                    <img src="./images/frontendmentor.png" alt="store image" width="380px">
                     <div>
                         <a href="https://itsrealmj.github.io/JavaScript-Store/">Site</a>
                         <a href="https://itsrealmj.github.io/JavaScript-Store/">Source code</a>
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
 
-       <h2>Get in touch</h2>
-    <section>
+    <h2>Get in touch</h2>
+    <section id="contact">
        <div class="contact">
            <form action="#">
                <label for="name">Full Name</label><br>
