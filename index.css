@@ -146,7 +146,8 @@ section .portfolio {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     gap: 3rem 2rem;
 }
 section .portfolio .card {
@@ -213,7 +214,7 @@ footer {
 footer .icon {
     display:flex;
     border: 1px solid white;
-    padding: .5rem 2rem;
+    padding: .5rem 1.7rem;
     border-bottom:none;
     border-radius: 5px 5px 0 0;
     background-color: black;
