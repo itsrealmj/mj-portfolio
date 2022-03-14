@@ -49,7 +49,7 @@ nav .links a{
     text-decoration: none;
     margin-left: 4rem;
     position: relative;
-
+    /*color: white;*/
 }
 nav .links a:after {
     content: "";
@@ -62,12 +62,13 @@ nav .links a:after {
     transition: .3s ease-in-out;
 }
 nav .links a:hover {
-    color: rgb(71, 71, 71);
-    
+    /*color: rgb(71, 71, 71);*/
+    /*color: red;*/
 }
 nav .links a:hover:after {
     width:100%;
-    background-color: rgb(71, 71, 71);;
+    /*background-color: rgb(71, 71, 71);*/
+    /*color: white;*/
 }
 
 nav .nav-links {
@@ -92,9 +93,6 @@ main .banner-container {
 main .banner {
     position: relative;
 }
-main .banner-containerer #about {
-    position: relative;
-}
 main h1 {
     font-size: 6rem;
     /*letter-spacing: .3rem;*/
@@ -113,11 +111,12 @@ main .pic {
     left: 5rem;
 }
 main .studio {
-    margin-left: 6px;
+    padding-left: 6px;
     /*letter-spacing: .8rem;*/
     opacity: .8;
 }
 main .stack {
+    /*background-color: gray;*/
     padding: 1rem 0;
     display: flex;
 }
@@ -151,6 +150,7 @@ section .portfolio {
     gap: 3rem 2rem;
 }
 section .portfolio .card {
+    /*transform: translateX(-100%);*/
     display: flex;
     flex-direction: column;
 }
@@ -220,7 +220,7 @@ footer .icon {
     background-color: black;
 }
 footer .icon div {
-    padding: 0 1rem ;
+    padding: 0 .5rem ;
 }
 footer a {
     text-decoration: none;
@@ -229,7 +229,117 @@ footer a {
 
 
 
+    @media only screen and (min-width: 600px) {
 
-    @media only screen and (max-width: 600px) {
+        
+        header nav {
+            display: flex;
+            align-items: center;
+            padding: 2rem 6rem;
+        }
+        nav .my-name{
+            display: flex;
+            flex: 1;
+            text-shadow: 0 1px orange;
+            letter-spacing: 3px;
+            font-size: 1.2rem;
+
+        }
+        nav .my-name a{
+            display: inline-flex;
+            text-decoration: none;
+            /*text-shadow: 3px 2px 20px;*/
+        }
+        /*nav .links {
+            position: relative;
+            cursor: pointer;
+
+        }*/
+        nav .links a{
+            text-decoration: none;
+            margin-left: 6rem;
+            position: relative;
+            font-weight: 600;
+            text-shadow: 3px 2px 20px;
+        }
+        /*nav .links a:after {
+            content: "";
+            width:0;
+            height: 2px;
+            background-color: orange;
+            position: absolute;
+            left: 0;
+            bottom:-.5rem;
+            transition: .3s ease-in-out;
+        }*/
+        nav .links a:hover {
+            color: rgb(71, 71, 71);
+            color: white;
+            
+        }
+        /*nav .links a:hover:after {
+            width:100%;
+            background-color:white;
+        }*/
+        nav .menu {
+            display: none;
+        }
+        nav .nav-links {
+            display: flex;
+            position: relative;
+            right:0;
+            left: 0;
+            line-height: 1rem;
+            /*border: 1px solid white;*/
+            width: 500px;
+            opacity: .9;
+            background-color: transparent;
+            margin-top:0;
+            box-shadow:none;
+        }
+
+        .banner-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        main #banner-text {
+            display: flex;
+            flex-direction: column;
+        }
+        main .banner {
+            padding-top: 2rem;
+            /*border: 1px solid white;*/
+        }
+        main .banner h1 {
+            letter-spacing: 3.1rem;
+        }
+        main .banner .studio {
+            letter-spacing: 1.7rem;
+        }
+        main .banner .stack {
+             width: 90%;
+        }
+        main .banner button{
+            width: 100%;
+            padding: .7rem 1rem;
+        }
+
+        .card a:hover {
+            color: gray;
+        }
+        /*    form     */
+        section .contact {
+            display: flex;
+            justify-content: center;
+            line-height: 2.5rem;
+            padding: 1rem ;
+            /*width: 100%;*/
+
+        }
+        section .contact form {
+            width: 50%;
+            padding: 1rem ;
+        }
+
 
     }
