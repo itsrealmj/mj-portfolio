@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     color: rgb(196, 193, 193);
+    font-family: 'poppins', sans-serif;
 }
 body {
     background-color: black;
@@ -39,6 +40,7 @@ nav .my-name{
 nav .my-name a{
     display: inline-flex;
     text-decoration: none;
+
 }
 nav .links {
     position: relative;
@@ -49,7 +51,11 @@ nav .links a{
     text-decoration: none;
     margin-left: 4rem;
     position: relative;
-    /*color: white;*/
+    font-size: 1.2rem;
+    transition: .3s;
+}
+nav .links a:hover{
+    transform: scale(1.1);
 }
 nav .links a:after {
     content: "";
@@ -61,14 +67,12 @@ nav .links a:after {
     bottom:-.5rem;
     transition: .3s ease-in-out;
 }
-nav .links a:hover {
-    /*color: rgb(71, 71, 71);*/
-    /*color: red;*/
-}
+/*nav .links a:hover {
+    color: rgb(71, 71, 71);
+    color: red;
+}*/
 nav .links a:hover:after {
     width:100%;
-    /*background-color: rgb(71, 71, 71);*/
-    /*color: white;*/
 }
 
 nav .nav-links {
@@ -92,17 +96,35 @@ main .banner-container {
    margin: 0 auto;
 }
 main .banner {
-    position: relative;
+    /*position: relative;*/
+}
+main .title {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
 }
 main h1 {
-    font-size: 6rem;
-    /*letter-spacing: .3rem;*/
+    font-size: 3rem;
+    padding-left: 1rem;
+    letter-spacing: 1rem;
     color: rgb(196, 193, 193);
+    border: 3px solid gray;
 }
-main .shape {
-    transform: translateX(50px);
-    width: 250px;
+main .title p {
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: -.5rem;
+    left: 18%;
+    font-weight: 630;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 1.0);
+    padding: 0 6px;
+    color: gray;
 }
+
+
 main .pic {
     width: 200px;
     height: 200px;
@@ -111,27 +133,22 @@ main .pic {
     position: absolute;
     left: 5rem;
 }
-main .studio {
-    padding-left: 6px;
-    /*letter-spacing: .8rem;*/
-    opacity: .8;
-}
+
 main .stack {
-    /*background-color: gray;*/
-    padding: 1rem 0;
+    padding: 2rem 0;
     display: flex;
+    justify-content: center;
 }
 main .stack button {
-    padding: .3rem ;
+    padding: .1rem ;
     border-radius: 3px;
-    border: 1px solid gray;
+    border: 2px solid gray;
     cursor: pointer;
     background-color: transparent;
     font-size: .9rem;
     margin-left: 5px;
     transform: scale(1.0);
     transition: .2s ;
-    /*letter-spacing: 2px;*/
 }
 main .stack button:hover {
     color: gray;
@@ -139,9 +156,6 @@ main .stack button:hover {
 }
 
 /* portfolio section */
-section .about {
-    padding-top: 10rem;
-}
 section .portfolio {
     display: flex;
     justify-content: center;
@@ -219,24 +233,28 @@ footer .icon {
     border-bottom:none;
     border-radius: 5px 5px 0 0;
     background-color: black;
+    align-items: center;
 }
 footer .icon div {
-    padding: 0 .5rem ;
+    padding: 0 3px ;
 }
 footer a {
     text-decoration: none;
     border-bottom: 2px solid gray;
 }
+footer a:hover {
+    color: gray;
+}
+
 
 
 
     @media only screen and (min-width: 600px) {
 
-        
         header nav {
             display: flex;
             align-items: center;
-            padding: 2rem 6rem;
+            padding: .5rem 6rem;
         }
         nav .my-name{
             display: flex;
@@ -263,16 +281,6 @@ footer a {
             font-weight: 600;
             text-shadow: 3px 2px 20px;
         }
-        /*nav .links a:after {
-            content: "";
-            width:0;
-            height: 2px;
-            background-color: orange;
-            position: absolute;
-            left: 0;
-            bottom:-.5rem;
-            transition: .3s ease-in-out;
-        }*/
         nav .links a:hover {
             color: rgb(71, 71, 71);
             color: white;
@@ -291,7 +299,6 @@ footer a {
             right:0;
             left: 0;
             line-height: 1rem;
-            /*border: 1px solid white;*/
             width: 500px;
             opacity: .9;
             background-color: transparent;
@@ -305,6 +312,8 @@ footer a {
         }
         main #banner-text {
             display: flex;
+            justify-content:center;
+            align-items: center;
             flex-direction: column;
         }
         main .banner {
@@ -312,35 +321,31 @@ footer a {
             /*border: 1px solid white;*/
         }
         main .banner h1 {
+            padding-left: 3rem;
             letter-spacing: 3.1rem;
         }
-        main .banner .studio {
-            letter-spacing: 1.7rem;
+        main .title p {
+            letter-spacing: 10px;
         }
         main .banner .stack {
              width: 90%;
         }
         main .banner button{
-            width: 100%;
             padding: .7rem 1rem;
         }
 
-        .card a:hover {
-            color: gray;
-        }
+        .card a:hover { color: gray;}
+
         /*    form     */
-        section .contact {
-            display: flex;
-            justify-content: center;
-            line-height: 2.5rem;
-            padding: 1rem ;
-            /*width: 100%;*/
+        section .contact form { width: 50%; }
 
+        footer .icon div {
+            padding: .2rem 3.6rem ;
+            
         }
-        section .contact form {
-            width: 50%;
-            padding: 1rem ;
+        footer .icon div:hover {
+            transform: scale(1.1);
+            transition: .3s;
         }
-
 
     }

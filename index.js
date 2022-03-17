@@ -1,4 +1,3 @@
-
 let menu = document.querySelector('.menu')
 let closed = document.querySelector('.closed')
 let navlinks = document.querySelector('.nav-links')
