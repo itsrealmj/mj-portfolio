@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -16,8 +16,8 @@
 
             <div class="links">
                 <!-- <div class="overlay"></div> -->
-                <img class="closed" src="./images/closed.png" width="30px" style="display: none;">
-                <img class="menu" src="./images/menu1.png" width="30px">
+                <img class="closed" src="./images/closed.png" width="40px" style="display: none;">
+                <img class="menu" src="./images/menu1.png" width="40px">
                 <div class="nav-links">
                     <a href="#about">ABOUT</a>
                     <a href="#portfolio">PORTFOLIO</a>
@@ -29,26 +29,30 @@
 
 
     <main>
+
         <div class="banner-container">
             <div class="banner" id="about">
-                <img class="shape" width="250px" src="./images/blob.svg" alt="">
-<!--                 <img class="pic" src="./images/pic.png" alt=""> -->
+                <img class="profile"  src="./images/profile.jpg" alt="profile-photo">
+                <div class="prof-links">
+                    <a href=""><img  src="./images/icons8-github.svg" alt="Github" ></a>
+                    <a href=""><img  src="./images/icons8-linkedin.svg" alt="LinkedIn"></a>
+                    <a href=""><img  src="./images/icons8-twitter.svg" alt="Twitter"></a>
+                </div>
             </div>
             
             <div class="banner" id="banner-text">
-
                 <div class="title">
-                    <h1>BLACK</h1>
-                    <p class="studio">CREATIVE STUDIO</p>
+                    <h1>FRONT-END DEV</h1>
+                    <p class="studio">"Work smart after working hard"</p>
                 </div>
                 <div class="stack">
-                    <button> HTML5 </button>
-                    <button> CSS3 </button>
-                    <button> Vanilla JS </button>
-                    <button> Git </button>
-                    <button> Github </button>
-                    <button> Web API </button>
+                    <img src="./images/js.png">
+                    <img src="./images/css-3.png">
+                    <img src="./images/html-5.png">
+                    <img src="./images/git.png">
+                    <img src="./images/api.png">
                 </div>
+                <a href="images/MJresume.pdf" target="_blank" class="resume-btn"><i class="fa fa-download"></i> Download CV</a>
             </div>
         </div>
     </main>
@@ -71,7 +75,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="./images/frontendmentor.png" alt="store image" width="300px">
+                    <img  src="./images/frontendmentor.png" alt="store image" width="300px">
                     <div>
                         <a href="https://itsrealmj.github.io/Frontendmentor-EStore/" target="_blank">View Site</a>
                         <a href="https://github.com/itsrealmj/Frontendmentor-EStore" target="_blank">Source code</a>
@@ -79,7 +83,7 @@
                 </div>
 
                 <div class="card">
-                    <img src="./images/store.png" alt="store image" width="300px">
+                    <img id="rare" src="./images/store.png" alt="store image" width="300px">
                     <div>
                         <a href="https://itsrealmj.github.io/JavaScript-Store/" target="_blank">View Site</a>
                         <a href="https://github.com/itsrealmj/JavaScript-Store" target="_blank">Source code</a>
@@ -92,25 +96,36 @@
     <section id="contact">
        <div class="contact">
            <form action="https://formsubmit.co/itsmjnacional@gmail.com" method="POST">
-               <label for="name">Full Name</label><br>
-               <input class="input-field" type="text" name="name" placeholder="Enter full name ..." required>
+               <label id="name-tag" for="name" style="opacity:0;">Full Name</label><br>
+               <input id="full-name" class="input-field" type="text" name="name" placeholder="Enter full name ..." required>
                 <br>
-               <label for="name">Email</label><br>
-               <input class="input-field" type="email" name="email" placeholder="Enter email ..." required>
+               <label for="name" id="email-tag" for="name" style="opacity:0;">Email</label><br>
+               <input id="email-field" class="input-field" type="email" name="email" placeholder="Enter email ..." required>
                 <br>
                 <br>
-               <label for="name">Message</label><br>
+               <!-- <label for="name">Message</label><br> -->
                <textarea name="textarea" id="" cols="30" rows="10" placeholder="Enter message ..." required></textarea>
                 <br>    
-                <input type="submit" value="Send" class="send">
+                <button type="submit" value="Send" class="send"> Send </button>
            </form>
        </div>
     </section>
+
     <footer>
-        <div class="icon">
-            <div class="github"><a href=""> <img src="./images/icons8-github.svg" alt="Github" width="20px" >Github</a></div>
-            <div class="linkedin"><a href=""><img src="./images/icons8-linkedin.svg" alt="LinkedIn" width="20px">LinkedIn</a> </div>
-            <div class="twitter"><a href=""><img src="./images/icons8-twitter.svg" alt="Twitter" width="20px">Twitter</a> </div>
+        <div>
+            <p> M.H Del Pilar St. Poblacion,</p>
+            <p>Tagoloan Misamis Oriental, 9001 , PH</p>
+            <p>0936-288-5382</p>
+
+            <div class="footer-links">
+                <a href="#"><img src="./images/icons8-github.svg" alt="Github" width="20px" ></a>
+                <a href="#" class="LinkedIn"><img src="./images/icons8-linkedin.svg" alt="LinkedIn" width="20px"></a>
+                <a href="#"><img src="./images/icons8-twitter.svg" alt="Twitter" width="20px"></a>
+                <p>&#169; 2022 MJ Nacional. All rights reserved.</p>
+            </div>
+        </div>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5711.153938016612!2d124.74990612441253!3d8.539847738024747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32ffee9885b81e87%3A0xbdd6a52849b3e32e!2sM.H.%20Del%20Pilar%20St%2C%20Tagoloan%2C%20Misamis%20Oriental!5e1!3m2!1sen!2sph!4v1647855561895!5m2!1sen!2sph" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         
     </footer>

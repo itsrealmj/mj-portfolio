@@ -35,7 +35,7 @@ nav .my-name{
     flex: 1;
     text-shadow: 0 1px orange;
     letter-spacing: 3px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 nav .my-name a{
     display: inline-flex;
@@ -88,12 +88,15 @@ nav .nav-links {
     padding: 2rem 0;
 }
 
-
 /*main             */
 
 main .banner-container {
-   width: 86%;
    margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: .5rem;
 }
 main .banner {
     /*position: relative;*/
@@ -103,56 +106,81 @@ main .title {
    display: flex;
    justify-content: center;
    align-items: center;
+   /*width: 100%;*/
 
 }
 main h1 {
-    font-size: 3rem;
-    padding-left: 1rem;
-    letter-spacing: 1rem;
+    font-size: 1rem;
+    padding: 1rem 0 1rem .3rem;
+    padding-left: .5rem;
+    letter-spacing: .3rem;
     color: rgb(196, 193, 193);
     border: 3px solid gray;
 }
 main .title p {
-    letter-spacing: 1px;
     position: absolute;
     bottom: -.5rem;
-    left: 18%;
     font-weight: 630;
     opacity: 1;
     background-color: rgba(0, 0, 0, 1.0);
     padding: 0 6px;
-    color: gray;
+    font-size: .6rem;
+    color: #b5b5b5;
 }
 
 
-main .pic {
+main #about {
+    display: flex;
+    align-items: center;
+    gap: 0 .7rem;
+    margin: .5rem 0;
+}
+
+main .prof-links img{
+    width: 15px;
+    display: flex;
+    margin: 2rem 0;
+}
+
+
+main .profile {
     width: 200px;
-    height: 200px;
-    object-fit: contain;
-    background-color: transparent;
-    position: absolute;
-    left: 5rem;
+    border-radius:50%;
+    object-fit: contain; 
 }
 
 main .stack {
     padding: 2rem 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap:.5rem;
 }
-main .stack button {
-    padding: .1rem ;
-    border-radius: 3px;
-    border: 2px solid gray;
-    cursor: pointer;
+main .stack img {
+    width: 45px;
+}
+main .resume-btn{
+    text-align: center;
     background-color: transparent;
-    font-size: .9rem;
-    margin-left: 5px;
-    transform: scale(1.0);
-    transition: .2s ;
+    padding: .5rem 0;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    transition: .3s ease;
+
 }
-main .stack button:hover {
+main .resume-btn:hover {
     color: gray;
-    transform: scale(1.1);
+    transform: scale(1.02);
+}
+
+
+main #banner-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* portfolio section */
@@ -184,6 +212,10 @@ section .portfolio .card {
     padding-bottom: .3rem;
     border-bottom: 2px solid gray;
 }
+.card:hover{
+    transition: .3s;
+    opacity: .9;
+}
 
 /* contact section */
 
@@ -205,6 +237,7 @@ section .contact form {
     padding: .5rem;
     outline: none;
 }
+
 .contact .send, textarea{
     font-size: 1rem;
     border-radius: 5px;
@@ -217,35 +250,48 @@ section .contact .input-field {
     border-bottom: 2px solid white;
     outline: none;
 }
+section .contact .send {
+    border: none;
+    width: 100%;
+    padding: .5rem;
+    position: relative;
+    /*display: flex;
+    justify-content: center;
+    gap: 0 .2rem;*/
+    transition: .5s;
+
+}
+section .contact .send:hover {
+    cursor: pointer;
+    background-color: #bababa;
+
+}
+section .contact .send::before {
+    content: url("./images/send.svg");
+    position: absolute;
+    top: .3rem;
+    margin-left: -1.7rem;
+    /*left: -2rem;*/
+    transform: rotate(-30deg);
+
+
+}
+
 
 /* footer section */
-footer {
-    display: flex;
-    justify-content: space-evenly;
-    position: sticky;
-    bottom: 0;
-    margin-top: 2rem;
+    footer  {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2REM;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
 }
-footer .icon {
-    display:flex;
-    border: 1px solid white;
-    padding: .5rem 1.7rem;
-    border-bottom:none;
-    border-radius: 5px 5px 0 0;
-    background-color: black;
-    align-items: center;
+footer .footer-links .LinkedIn{
+    margin: 1rem;
 }
-footer .icon div {
-    padding: 0 3px ;
+footer iframe {
+    border-radius: 5px;
 }
-footer a {
-    text-decoration: none;
-    border-bottom: 2px solid gray;
-}
-footer a:hover {
-    color: gray;
-}
-
 
 
 
@@ -261,19 +307,13 @@ footer a:hover {
             flex: 1;
             text-shadow: 0 1px orange;
             letter-spacing: 3px;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
 
         }
         nav .my-name a{
             display: inline-flex;
             text-decoration: none;
-            /*text-shadow: 3px 2px 20px;*/
         }
-        /*nav .links {
-            position: relative;
-            cursor: pointer;
-
-        }*/
         nav .links a{
             text-decoration: none;
             margin-left: 6rem;
@@ -286,10 +326,6 @@ footer a:hover {
             color: white;
             
         }
-        /*nav .links a:hover:after {
-            width:100%;
-            background-color:white;
-        }*/
         nav .menu {
             display: none;
         }
@@ -306,32 +342,67 @@ footer a:hover {
             box-shadow:none;
         }
 
-        .banner-container {
-            display: flex;
-            justify-content: space-around;
+        main .banner-container {
+            margin-top: 2rem;
+            width: 80%;
+            flex-direction: row;
+            justify-content: space-evenly;
         }
-        main #banner-text {
+        main .prof-links {
             display: flex;
-            justify-content:center;
+            gap: 0 3rem;
+        }
+        main .prof-links img {
+            width: 30px;
+        }
+        main .prof-links img:hover {
+            transform: scale(1.1);
+            transition: .3s;
+        }
+        main #about {
+            display: flex;
             align-items: center;
             flex-direction: column;
         }
-        main .banner {
-            padding-top: 2rem;
-            /*border: 1px solid white;*/
+
+        main .profile {
+            width: 200px;
+            border-radius:50%;
+            object-fit: contain; 
+        }
+        main .banner-container #about .profile{
+            width: 350px;
+        }
+        main .resume-btn {
+            width: 98%;
         }
         main .banner h1 {
-            padding-left: 3rem;
-            letter-spacing: 3.1rem;
+            /*line-height: 4rem;*/
+            font-size: 1.8rem;
+            padding-left: 2rem;
+            letter-spacing: 2rem;
         }
         main .title p {
+            font-size: .9rem;
             letter-spacing: 10px;
         }
-        main .banner .stack {
-             width: 90%;
+
+        main .stack {
+            gap:2rem;
+        }  
+        main .stack img {
+            width: 100px;
         }
+        
         main .banner button{
             padding: .7rem 1rem;
+        }
+
+
+        /*PORTFOLIO*/
+        .portfolio img {
+            width: 350px;
+            height: 250px;
         }
 
         .card a:hover { color: gray;}
@@ -339,13 +410,23 @@ footer a:hover {
         /*    form     */
         section .contact form { width: 50%; }
 
-        footer .icon div {
-            padding: .2rem 3.6rem ;
-            
+        footer {
+            /*width: 80%;
+            margin: 0 auto;*/
+            padding-top: 5rem;
+            font-size: 1.5rem;
+            line-height: 3rem;
+            display: flex;
+            justify-content: space-between;
         }
-        footer .icon div:hover {
-            transform: scale(1.1);
-            transition: .3s;
+        footer .footer-links img {
+            width: 40px;
+        }
+        footer .footer-links .LinkedIn{
+            margin: 3rem;
+        }
+        footer iframe {
+            width: 500px;
         }
 
     }
