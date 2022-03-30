@@ -106,11 +106,11 @@ main .title {
    display: flex;
    justify-content: center;
    align-items: center;
-   /*width: 100%;*/
+   width: 100%;
 
 }
 main h1 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 1rem 0 1rem .3rem;
     padding-left: .5rem;
     letter-spacing: .3rem;
@@ -124,7 +124,7 @@ main .title p {
     opacity: 1;
     background-color: rgba(0, 0, 0, 1.0);
     padding: 0 6px;
-    font-size: .6rem;
+    font-size: .8rem;
     color: #b5b5b5;
 }
 
@@ -376,14 +376,15 @@ footer iframe {
         main .resume-btn {
             width: 98%;
         }
+
         main .banner h1 {
-            /*line-height: 4rem;*/
-            font-size: 1.8rem;
+            line-height: 5rem;
+            font-size: 2rem;
             padding-left: 2rem;
             letter-spacing: 2rem;
         }
         main .title p {
-            font-size: .9rem;
+            font-size: 1.2rem;
             letter-spacing: 10px;
         }
 
@@ -411,8 +412,6 @@ footer iframe {
         section .contact form { width: 50%; }
 
         footer {
-            /*width: 80%;
-            margin: 0 auto;*/
             padding-top: 5rem;
             font-size: 1.5rem;
             line-height: 3rem;
