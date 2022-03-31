@@ -27,3 +27,26 @@ emailField.addEventListener('mousedown', function() {
 	 document.querySelector('#email-tag').style = 'opacity : 1; transition :1s;'
 
 })
+
+
+
+// INTERSECTION OBSERVER
+document.addEventListener('DOMContentLoaded', function() {
+	let observer =  new IntersectionObserver(touching, {root : null, rootMargin: "20px 0px",threshold : .05})
+	document.querySelectorAll('.animate').forEach(banner => {
+		observer.observe(banner)
+	})
+})
+	
+function touching(entries, obs) {
+	entries.forEach(e => {
+		console.log('inter')
+		if (e.isIntersecting) { 
+			e.target.classList.add('activate')
+			obs.unobserve(e.target)
+		}
+	})	
+}
+// INTERSECTION OBSERVER END
+
+
