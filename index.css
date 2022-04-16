@@ -211,6 +211,7 @@ section .portfolio .card {
     border-radius: 5px;
     box-shadow:3px 2px 3px rgb(223, 121, 5);
     opacity: .8;
+    height: 200px;
 }
 .card div { 
     margin-top: 1rem;
